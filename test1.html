@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Creacion automatizada de contenedores</h2>
+        <br/>
+        <form method="post" action="./save.php">
+            <label>Elige una imagen</label>
+            <br/>
+            <br/>
+                <select id="iso" name="iso">
+                    <option value="ubuntu" name="imagen"> ubuntu</option>
+                    <option value="debian" name="imagen"> debian</option>
+                    <option value="centos" name="imagen"> centos</option>
+                    <option value="fedora" name="imagen"> fedora</option>
+                </select>
+                <br/>
+                <br/>
+            <label for="servicisios">Elige un servicio</label>
+            <br/>
+            <br/>
+                <select id="servicios" name="servicios">
+                    <option value="php" id="php" name="id" >PHP</option>
+                    <option value="mysql" id="mysql" name="id" >MYSQL</option>
+                    <option value="nginx" id="nginx" name="id" >NGINX</option>
+                    <option value="firefox" id="firefox" name="id" >Firefox</option>
+                </select>
+                <br/>
+                <br/>
+        </form>
+        <input type="submit" name="submit" value="submit"/>
+    </body>
+</html>
