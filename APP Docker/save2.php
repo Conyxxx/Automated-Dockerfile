@@ -34,7 +34,10 @@ if( isset($_POST['Enviar'])){
             #Funcion de guardar en un archivo de texto
             $doc = fopen("Dockerfile.txt","w") or die('Cannot open or create the file');
             $var1 = "FROM"; #Decirle de que imagen parta la instalacion
+            $var2 = "\nRUN apt-get -y"; #Lanzar un comando
+            $var3 = "&&";
             fwrite($doc,"$var1 $image:$version");
+            fwrite($doc,"$var2 $actualizar $var3");
             fclose($doc);
             print_r(error_get_last());
     
