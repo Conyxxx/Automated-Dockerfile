@@ -1,3 +1,3 @@
 # Automated-Dockerfile
-
-el archivo test1.html contiene lo que creo que tengo que hacer para el proyecto, y dentro del archivo php como tendria que convertir el texto a dockerfile.
+###En el directorio de APP Docker es donde subire la pagina web conforme vaya consiguiendo avanzando con la creacion del dockerfile a gusto del usuario.
+###El directorio de apache-testing contiene un dockerfile con la instalacion de apache.
