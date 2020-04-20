@@ -1,25 +1,43 @@
 <?php
 if( isset($_POST['Enviar'])){
+
     if(isset($_POST['IMAGENES'])){
         echo "FROM ";
-        foreach ($_POST['IMAGENES'] as $value){
-            echo $value . " : ";
+        foreach ($_POST['IMAGENES'] as $image){
+            echo $image . " : ";
         if(isset($_POST['VERSION'])){
-            foreach($_POST['VERSION'] as $value){
-                echo $value;
+            foreach($_POST['VERSION'] as $version){
+                echo $version;
             }
         }
             echo "<br>";
         }
 
     }
+
+    if(isset($_POST['ACTUALIZAR'])){
+        echo "RUN apt-get ";
+        foreach ($_POST['ACTUALIZAR'] as $actualizar){
+            echo $actualizar . " ";
+        }
+        echo '&&';
+        echo "<br>";
+    }
+
     if(isset($_POST['SERVICIOS'])){
-        echo "RUN apt-get install -y ";
-        foreach ($_POST['SERVICIOS'] as $value) {
-            echo $value . " "  ;
+        echo "apt-get install -y ";
+        foreach ($_POST['SERVICIOS'] as $servicios) {
+            echo $servicios . " "  ;
         }
         echo "&& ";
     }
+            #Funcion de guardar en un archivo de texto
+            $doc = fopen("Dockerfile.txt","w") or die('Cannot open or create the file');
+            $var1 = "FROM"; #Decirle de que imagen parta la instalacion
+            fwrite($doc,"$var1 $image:$version");
+            fclose($doc);
+            print_r(error_get_last());
+    
 
 }
 ?>
