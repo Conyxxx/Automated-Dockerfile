@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action="save2.php" method="POST">
+        <p>Imagenes</p>
+        <input type="checkbox" name="IMAGENES[]" value="debian"> &nbsp; Debian <br>
+        <br>
+        <p>Versiones de Imagenes</p>
+        <input type="checkbox" name="VERSION[]" value="slim">&nbsp; Slim <br>
+        <input type="checkbox" name="VERSION[]" value="jessie">&nbsp; Jessie <br>
+        <br>
+        <p>Funcion</p>
+        <input type="checkbox" name="ACTUALIZAR[]" value="update">&nbsp; Actualizar<br>
+        <br>
+        <p>Paquetes</p>
+        <input type="checkbox" name="APLICACIONES[]" value="php">&nbsp; PHP <br>
+        <input type="checkbox" name="APLICACIONES[]" value="mysql">&nbsp; Mysql <br>
+        <input type="checkbox" name="APLICACIONES[]" value="apache">&nbsp; Apache<br>
+        <input type="checkbox" name="APLICACIONES[]" value="nginx">&nbsp; NGINX<br>
+        <br>
+        <br>
+        <p>Nombre del Contenedor</p>
+        <input type="text" name="NOMBRE[]">
+        <br>
+        <br>
+        <input type="submit" name="Enviar" value="Crear Archivo">
+        <input type="submit" name="Crear" value="Crear Contenedor">
+    </form>
+</body>
+</html>
