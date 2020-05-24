@@ -1,0 +1,19 @@
+.container{
+    border: 2px solid;
+    display: flexbox;
+}
+.IMAGENES{
+    color:rgb(255, 0, 221);
+}
+.titulos{
+    color: rgba(62, 122, 233, 0.966);
+}
+.ISO{
+    color: pink;
+}
+.APP{
+    color: red;
+}
+.Versiones{
+    color: green;
+}
